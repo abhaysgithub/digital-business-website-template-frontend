@@ -1,0 +1,20 @@
+/*----------------------------------------*/
+/*  BRAND CSS START
+/*----------------------------------------*/
+
+
+@use '../utils' as *;
+
+.brand__title {
+	text-align: center;
+	span {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 65px;
+		display: inline-block;
+		text-align: center;
+	}
+}
+.singel__brand {
+	text-align: center;
+}

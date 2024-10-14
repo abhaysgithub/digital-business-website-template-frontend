@@ -1,0 +1,54 @@
+/*----------------------------------------*/
+/*  CHOOSE CSS START
+/*----------------------------------------*/
+
+@use '../utils' as *;
+
+.choose__features {
+	padding: 60px 30px 55px;
+	background: #fafafa;
+	border-radius: 10px;
+    @include transition(.3s);
+    overflow: hidden;
+    &:hover {
+        background: var(-clr-common-white);
+        box-shadow: 0px 15px 30px rgba(50, 73, 179, 0.2);
+		.choose__features-icon {
+			margin-bottom: 55px;
+			transform: translateY(-10px) translate3d(0, -5px, 0);
+		}
+    }
+}
+.choose__features-icon {
+	margin-bottom: 55px;
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+	-moz-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+	-ms-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+	-o-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+	transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+}
+.choose__line {
+	padding-bottom: 60px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.choose__features-content {
+	h3 {
+		a {
+			display: block;
+			font-size: 24px;
+			margin-bottom: 20px;
+			@media #{$xl,$md,$xxs}{
+				font-size: 20px;
+			}
+            &:hover {
+                background-color: var(-clr-common-white);
+                color: var(--clr-theme-5);
+            }
+		}
+	}
+	p {
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+}

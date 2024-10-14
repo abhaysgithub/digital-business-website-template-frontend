@@ -1,0 +1,117 @@
+/*----------------------------------------*/
+/*  SEO CSS START
+/*----------------------------------------*/
+
+@use '../utils' as *;
+
+.seo_content-wrapper {
+    display: grid;
+    grid-template-columns: 265px 265px 265px;
+    justify-content: space-between;
+	@media #{$md}{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media #{$xs,$sm}{
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
+}
+.seo__shape {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.seo__content {
+	h3 {
+		color: var(--clr-common-white);
+		font-size: 45px;
+		margin-bottom: 10px;
+	}
+	p {
+		color: var(--clr-common-white);
+		margin-bottom: 0;
+	}
+}
+// Price Tab
+.pricing__switch{
+	.nav-tabs {
+    border: none;
+    margin-bottom: 40px;
+		.nav-link {
+			margin-bottom: 0;
+			border: 0;
+		}
+	}
+	.nav {
+		.nav-item {
+			padding-left: 0px;
+			.nav-link {
+        padding: 5px 48px;
+				background: transparent;
+				border-radius: 0;
+				font-weight: 700;
+				text-transform: capitalize;
+				position: relative;
+				outline: none;
+				font-size: 14px;
+				border: none;
+				color: var(--clr-common-heading);
+				@media #{$xxs}{
+				padding: 5px 40px;
+				}
+				&.active {
+				color: var(--clr-theme-3);
+						}
+				&.active {
+					&::after {
+						right: 4px;
+						@include transition(.3s);
+					}
+				}
+				&::after {
+					position: absolute;
+					content: "";
+					right: -18px;
+					top: 50%;
+					@include transform(translateY(-50%));
+					@include border-radius(50%);
+					width: 14px;
+					height: 14px;
+					background-color: var(--clr-theme-3);
+					z-index: 1;
+					@include transition(.3s);
+				}
+				&::before {
+					position: absolute;
+					content: "";
+					right: 0px;
+					top: 50%;
+					@include transform (translateY(-50%) translateX(50%));
+					@include border-radius(20px);
+					background: var(--clr-border-2);
+					width: 50px;
+					height: 30px;
+					background-color: var(--clr-common-white);
+					@include transition(.3s);
+				}
+			}
+			&:last-child {
+				.nav-link {
+					padding-right: 0;
+					&::after {
+						display: none;
+					}
+					&::before {
+						display: none;
+					}
+				}
+			}
+			&:first-child {
+				.nav-link {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

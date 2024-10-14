@@ -1,0 +1,19 @@
+
+/*----------------------------------------*/
+/*  PARTNER CSS START
+/*----------------------------------------*/
+
+@use '../utils' as *;
+
+.partner__area {
+	margin-top: -20px;
+	@media #{$xs,$sm,$md}{
+		margin-top: 65px;
+	}
+}
+.partner__wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}

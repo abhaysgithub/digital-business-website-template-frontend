@@ -1,0 +1,120 @@
+
+/*----------------------------------------*/
+/*  PROJECT CSS START
+/*----------------------------------------*/
+
+@use '../utils' as *;
+
+.project__shape-1 {
+	position: absolute;
+	bottom: -55px;
+	z-index: -1;
+	left: -35px;
+}
+.project__shape-2 {
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	z-index: -1;
+	@media #{$xs,$sm}{
+		right: 0;
+	}
+}
+.projet__thumb {
+	img {
+		width: 100%;
+	}
+}
+.projet__thumb-inner {
+	position: relative;
+	margin-left: 50px;
+	border-radius: 20px;
+	overflow: hidden;
+	@media #{$xs,$sm,$md}{
+		margin-left: 0;
+	}
+}
+.project__paragraph {
+	padding-left: 60px;
+	margin-bottom: 0;
+	@media #{$xs,$sm,$md,$lg}{
+		padding-left: 0px;
+	}
+}
+.project__title {
+	h3 {
+		font-size: 30px;
+		line-height: 1.7;
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+}
+.projet__thumb-wrapper {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 509px;
+		height: 452px;
+		border-radius: 20px;
+		background: #fafafa;
+		bottom: -50px;
+		z-index: -1;
+		right: 0;
+	}
+}
+.project__item {
+	background: #f2f2f2;
+	border-radius: 20px;
+}
+.project__thumb {
+	img {
+		width: 100%;
+		border-radius: 20px;
+	}
+}
+.project__content {
+	padding: 40px 40px 35px;
+	@media #{$xxs,$md}{
+		padding: 40px 20px 35px;
+	}
+	h3 {
+		font-size: 22px;
+		margin-bottom: 30px;
+		@media #{$xs,$sm}{
+			font-size: 20px;
+		}
+	}
+	p {
+		margin-bottom: 30px;
+	}
+}
+.project__tag {
+	display: inline-flex;
+	gap: 10px;
+	a {
+		font-size: 14px;
+		color: #636363;
+		padding: 2px 9px;
+		border-radius: 4px;
+		background: #dfdfdf;
+	}
+}
+
+.project__filter-button {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	@media #{$xs,$sm,$md}{
+		gap: 20px;
+	}
+	button {
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+	.active {
+		color: var(--clr-theme-1);
+	}
+}

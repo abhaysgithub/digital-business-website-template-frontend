@@ -1,0 +1,236 @@
+/*----------------------------------------*/
+/*  TOUCH CSS START
+/*----------------------------------------*/
+@use '../utils' as *;
+
+.touch__search {
+	position: relative;
+	margin-bottom: 30px;
+	input {
+		width: 100%;
+		background: var(--clr-common-white);
+		border: 0;
+		height: 55px;
+		padding-left: 20px;
+		font-size: 14px;
+		color: #BFBFBF;
+		border-radius: 5px;
+		padding-right: 60px;
+	}
+	button {
+		position: absolute;
+		right: 10px;
+		background: var(--clr-theme-1);
+		height: 40px;
+		width: 40px;
+		border-radius: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.touch__social {
+	display: flex;
+	gap: 20px;
+	a {
+		font-size: 14px;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #727272;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #727272;
+		border-radius: 50%;
+        &:hover {
+            border-color: var(--clr-theme-1);
+            background-color: var(--clr-theme-1);
+            color: var(--clr-common-white);
+        }
+	}
+}
+.touch-bg {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: "";
+		background: var(--clr-theme-4);
+		height: 550px;
+		z-index: -1;
+		width: 100%;
+		top: 0;
+	}
+}
+.touch__left {
+	& > p {
+		color: var(--clr-common-white);
+		margin-bottom: 45px;
+	}
+}
+.touch__input {
+	margin-bottom: 15px;
+	input {
+		width: 100%;
+		height: 60px;
+		background: #f9f9f9;
+		border: 0;
+		padding: 0 20px;
+		border-radius: 10px;
+		color: #bababa;
+	}
+}
+.touch__contact {
+	background: var(--clr-common-white);
+	padding: 110px 40px 40px;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0px 10px 50px rgba(50, 73, 179, 0.08);
+	@media #{$xs}{
+		padding: 110px 20px 40px;
+	}
+}
+.touch__submit {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 25px;
+	align-items: center;
+}
+.touch__content-title {
+	border-radius: 0px 0px 15px 15px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	h3 {
+		background: var(--clr-theme-1);
+		padding: 20px 30px;
+		text-align: center;
+		display: inline-block;
+		box-shadow: 0px 10px 50px rgba(50, 73, 179, 0.08);
+		font-size: 22px;
+		color: var(--clr-common-white);
+		font-weight: 600;
+		@media #{$lg}{
+			font-size: 20px;
+		}
+		@media #{$xs,$sm}{
+			font-size: 16px;
+		}
+	}
+}
+.touch__carcle {
+	width: 156px;
+	height: 156px;
+	background: #f8d458;
+	border-radius: 50%;
+	position: absolute;
+	top: -40px;
+	right: -65px;
+	z-index: -1;
+	-moz-animation: tptranslateX2 3s ease-in-out 1s forwards infinite alternate;
+	-webkit-animation: tptranslateX2 3s ease-in-out 1s forwards infinite alternate;
+	animation: tptranslateX2 3s ease-in-out 1s forwards infinite alternate;
+	@media #{$md,$lg,$xl}{
+		right: -30px;
+	}
+	@media #{$xs,$sm}{
+		right: -30px;
+	}
+	@media #{$xs,$sm}{
+		right: 0;
+	}
+}
+.sign__action {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	span {
+		font-size: 14px;
+		&:hover {
+			color: var(--clr-theme-1);
+		}
+	}
+}
+input {
+	&.e-check-input {
+		margin: 0;
+		appearance: none;
+		-moz-appearance: none;
+		display: block;
+		width: 18px;
+		min-width: 18px;
+		height: 18px;
+		background: var(--clr-common-white);
+		border: 1px solid #b9bac1;
+		outline: none;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-o-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		&:checked {
+			position: relative;
+			background-color: var(--clr-theme-1);
+			border-color: transparent;
+			&::after {
+				box-sizing: border-box;
+				content: "\f00c";
+				position: absolute;
+				font-family: var(--bd-ff-fontawesome);
+				font-size: 12px;
+				color: var(--clr-common-white);
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+.sign__check {
+	a {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
+.contact__select {
+	position: relative;
+	select {
+		height: 60px;
+		width: 100%;
+		background: #f9f9f9;
+		border: none;
+		padding: 15px 15px;
+		border-radius: 6px;
+		outline: 0;
+		color: #bababa;
+		position: relative;
+		appearance: none;
+	}
+	&::after {
+		position: absolute;
+		content: "\f107";
+		background-color: transparent;
+		top: 18px;
+		right: 27px;
+		width: 0;
+		height: 0;
+		font-family: var(--bd-ff-fontawesome);
+		color: #bababa;
+		font-size: 16px;
+	}
+}
+
+
+// Google map
+.google__map-area {
+	iframe {
+		width: 100%;
+		height: 500px;
+		margin-bottom: -7px;
+	}
+}

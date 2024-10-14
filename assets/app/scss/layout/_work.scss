@@ -1,0 +1,69 @@
+/*----------------------------------------*/
+/*  WORK MENU CSS START
+/*----------------------------------------*/
+
+@use '../utils' as *;
+
+.work__item-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 125px;
+	@media #{$sm,$md}{
+		column-gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$xs}{
+		column-gap: 30px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+ 
+.work__item {
+	position: relative;
+	text-align: center;
+	&:hover {
+		.work__thumb img {
+			margin-top: tr;
+			transform: translateY(-10px);
+		}
+	}
+}
+.work__thumb {
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+.work__content {
+	h3 {
+		a {
+			display: inline-block;
+			margin-bottom: 20px;
+			font-size: 24px;
+			&:hover {
+				color: var(--clr-theme-5);
+			}
+			@media #{$xl,$lg,$md,$sm,$xxs}{
+				font-size: 20px;
+			}
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.work__flow-shape {
+	&::before {
+		position: absolute;
+		content: "";
+		background-image: url("../../img/shape/work-flow.png");
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat;
+		top: 0;
+		left: 125%;
+		transform: translateX(-50%);
+		@media #{$xs,$sm,$md}{
+			display: none;
+		}
+	}
+}
+

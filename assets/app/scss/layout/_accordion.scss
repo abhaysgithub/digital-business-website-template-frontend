@@ -1,0 +1,116 @@
+/*----------------------------------------*/
+/*  ACCORDION CSS START
+/*----------------------------------------*/
+
+
+@use '../utils' as *;
+.bd-faq {
+	&__accordion {
+		.accordion-button {
+            font-size: 18px;
+            font-weight:500;
+            height: 60px;
+			padding: 0;
+            background: transparent;
+			@include border-radius(30px);
+			@media #{$xs,$lg}{
+				font-size: 16px;
+			}
+			&:focus {
+				z-index: 3;
+				border: none;
+				outline: 0;
+				box-shadow: none;
+			}
+			&:not(.collapsed) {
+				content: "";
+				box-shadow: none;
+				border: 0;
+				color: var(--clr-common-heading);
+			}
+			&:not(.collapsed)::after {
+				background: none;
+				transform: rotate(180deg);
+				content: "";
+				position: absolute;
+				right: 10px;
+                top: 50%;
+                height: 35px;
+                width: 35px;
+                background-color: var(--clr-theme-1);
+				border-color: transparent;
+                color: var(--clr-common-white);
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                @include transform(translateY(-50%));
+				font-family: var(--bd-ff-fontawesome);
+			}
+			&::after {
+				background: none;
+				color: #707070;
+                content: "\2b";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                height: 35px;
+                width: 35px;
+                background-color:transparent;
+				border: 1px solid #707070;
+                @include flexbox();
+                align-items: center;
+                justify-content: center;
+                @include transform(translateY(-50%));
+                font-family: var(--bd-ff-fontawesome);
+                font-weight: 700;
+				font-size: 12px;
+				@include transition (.3s);
+                @include border-radius(50%);
+			}
+		}
+		.accordion-item {
+            border: 0;
+			background-color: transparent;
+			border-bottom: 1px solid #E2E1DB;;
+			padding: 17px 0;
+			border-radius: 0;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+		.accordion-collapse {
+			border: 0;
+		}
+		.accordion-body {
+			margin-bottom: 0;
+			padding: 5px 0 15px;
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.bd-faq__wrapper-2 {
+	padding: 10px 40px 10px;
+	background: #f2f2f2;
+	border-radius: 15px;
+	@media #{$xs,$sm}{
+		padding: 10px 25px 10px;
+	}
+}
+.style-2 {
+	.accordion-button {
+		font-size: 22px;
+		@media #{$xs,$sm} {
+			font-size: 18px;
+		}
+	}
+	.accordion-body {
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+

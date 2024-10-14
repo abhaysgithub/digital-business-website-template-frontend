@@ -1,0 +1,124 @@
+
+/*----------------------------------------*/
+/*  SERVICE CSS START
+/*----------------------------------------*/
+@use '../utils' as *;
+
+.service__bg {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.service {
+    &__item {
+        position: relative;
+        border: 1px solid rgba(114, 114, 114, 0.2);
+        padding: 35px 30px 35px 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 4;
+        background-color: var(--clr-common-white);
+        @include transition(.3s);
+        @media #{$xxs} {
+            padding: 35px 20px 35px 20px;
+        }
+        &:hover {
+            .service {
+                &__thumb {
+                    opacity: 15%;
+                }
+                &__content {
+                    h3 {
+                        a {
+                            color: var(--clr-common-white);
+                            &:hover {
+                                color: var(--clr-theme-1);
+                            }
+                        }
+                    }
+                    p {
+                        color: var(--clr-common-white);
+                    }
+                }
+                &__link {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &__icon {
+                    svg {
+                        * {
+                            fill: var(--clr-common-white);
+                        }
+                    }
+                }
+            }
+            &:before {
+                opacity: 1;
+            }
+            border-color: transparent;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: var(--clr-theme-2);
+            top: 0%;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            @include transition(.3s);
+        }
+    }
+    &__icon {
+        margin-bottom: 35px;
+    }
+    &__content {
+        h3 {
+            a {
+                margin-bottom: 20px;
+                display: inline-block;
+                font-size: 22px;
+                @media #{$xxs,$md}{
+                    font-size: 20px;
+                }
+            }
+        }
+        p {
+            color: #4b4b4b;
+            margin-bottom: 0;
+        }
+    }
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        @include transition(.3s);
+    }
+    &__link {
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        a {
+            width: 50px;
+            height: 50px;
+            background: #444990;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            color: var(--clr-common-white);
+            &:hover {
+                color: var(--clr-common-heading);
+                background-color: var(--clr-common-white);
+            }
+        }
+    }
+}

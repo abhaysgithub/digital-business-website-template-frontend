@@ -1,0 +1,53 @@
+
+/*----------------------------------------*/
+/*  FACT CSS START
+/*----------------------------------------*/
+
+
+@use '../utils' as *;
+
+.fact__item {
+	padding: 40px 30px 35px;
+	border: 1px solid #E3E3E3;
+	border-radius: 10px;
+}
+.fact__number {
+	& > span {
+		font-size: 50px;
+		font-weight: 600;
+		font-family: var(--bd-ff-heading);
+		line-height: 1;
+		display: inline-block;
+	}
+}
+.fact__count {
+	display: flex;
+	align-items: center;
+    margin-bottom: 45px;
+}
+.fact__letter {
+    display: flex;
+	gap: 15px;
+    span {
+        font-size: 50px;
+		font-weight: 600;
+		font-family: var(--bd-ff-heading);
+		line-height: 1;
+		display: inline-block;
+    }
+    .plus {
+        color: var(--clr-theme-1);
+    }
+}
+.fact__content {
+	h3 {
+		a {
+			font-size: 22px;
+			display: inline-block;
+			margin-bottom: 25px;
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+}

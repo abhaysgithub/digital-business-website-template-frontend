@@ -1,0 +1,111 @@
+/*----------------------------------------*/
+/*  TECHNICAL CSS START
+/*----------------------------------------*/
+@use '../utils' as *;
+
+.technical__thumb {
+	img {
+		width: 100%;
+		border-radius: 20px;
+	}
+}
+.technical__title {
+	h3 {
+		font-size: 35px;
+		margin-bottom: 35px;
+		@media #{$md,$lg,$xl} {
+			font-size: 30px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 28px;
+		}
+		@media #{$xxs} {
+			font-size: 24px;
+		}
+	}
+}
+.technical__content {
+	p {
+		line-height: 28px;
+		margin-bottom: 0;
+	}
+}
+
+// sidebar style
+.sidebar__category {
+	padding: 30px 30px 30px;
+	border-radius: 10px;
+	background: var(--clr-common-white);
+	box-shadow: 0px 10px 50px rgba(50, 73, 179, 0.08);
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	li {
+		list-style: none;
+		position: relative;
+		padding-bottom: 17px;
+		border-bottom: 1px solid #e1e1e1;
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+		a {
+			font-size: 16px;
+			font-weight: 600;
+			&:hover {
+				color: var(--clr-theme-1);
+			}
+		}
+	}
+}
+.sidebar__contact {
+	padding: 30px 30px 30px;
+	border-radius: 10px;
+	background: var(--clr-common-white);
+	box-shadow: 0px 10px 50px rgba(50, 73, 179, 0.08);
+	@media #{$xs,$sm}{
+		padding: 30px 20px 30px;
+	}
+}
+.sidebar__contact-title {
+	h3 {
+		font-size: 22px;
+	}
+}
+.sideber__contact-icon {
+	height: 48px;
+	width: 48px;
+	min-width: 48px;
+	border: 1px solid #c7c7c7;
+	text-align: center;
+	line-height: 43px;
+	border-radius: 50%;
+}
+.sidebar__contact-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.sideber__contact-text {
+	span {
+		a {
+			font-size: 16px;
+			font-weight: 500;
+			&:hover {
+				color: var(--clr-theme-1);
+			}
+		}
+	}
+}
+.slideber__thumb {
+	img {
+		border-radius: 10px;
+	}
+}
+

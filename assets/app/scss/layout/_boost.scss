@@ -1,0 +1,43 @@
+/*----------------------------------------*/
+/*  BOOST CSS START
+/*----------------------------------------*/
+@use '../utils' as *;
+
+.boost__thumb-wrapper {
+	position: relative;
+}
+.boost__shape-1 {
+	position: absolute;
+	bottom: 33%;
+	width: 86px;
+	height: 86px;
+	background: #f8d458;
+	border-radius: 50%;
+	right: 50px;
+}
+.boost__shape-2 {
+	position: absolute;
+	bottom: 28%;
+	left: 30px;
+}
+.boost__shape-4 {
+	position: absolute;
+	bottom: 15%;
+	left: 40%;
+}
+.boost__shape-3 {
+	width: 13.85px;
+	height: 13.85px;
+	background: #425fec;
+	border-radius: 540%;
+	position: absolute;
+	bottom: 21%;
+	left: 20%;
+}
+.boost__thumb {
+	img {
+		-moz-animation: hero-thumb-animation 2s linear infinite alternate;
+		-o-animation: hero-thumb-animation 2s linear infinite alternate;
+		animation: hero-thumb-animation 2s linear infinite alternate;
+	}
+}

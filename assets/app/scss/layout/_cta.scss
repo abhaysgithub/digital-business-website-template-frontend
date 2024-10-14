@@ -1,0 +1,115 @@
+/*----------------------------------------*/
+/*  CTA CSS START
+/*----------------------------------------*/
+
+
+@use '../utils' as *;
+
+.cta__shape-1 {
+	width: 373.92px;
+	height: 373.92px;
+	background: linear-gradient(rgba(248, 212, 88, 0) 0%, rgba(248, 212, 88, 0.21) 100%);
+	border-radius: 50%;
+	position: absolute;
+	bottom: -120px;
+	left: 200px;
+	-moz-animation: hero-thumb-animation 2s linear infinite alternate;
+	-o-animation: hero-thumb-animation 2s linear infinite alternate;
+	animation: hero-thumb-animation 2s linear infinite alternate;
+	@media #{$xs}{
+		display: none;
+	}
+}
+.cta__shape-2 {
+	width: 172.17px;
+	height: 172.17px;
+	background: linear-gradient(rgba(56, 135, 254, 0) 0%, rgba(56, 135, 254, 0.15) 100%);
+	border-radius: 50%;
+	position: absolute;
+	right: 5%;
+	top: 140px;
+}
+.cta__inner {
+	padding: 120px 60px 60px;
+	filter: drop-shadow(0px 12px 30px rgba(99, 99, 99, 0.35));
+	border-radius: 20px;
+	box-shadow: 0px 12px 30px rgba(99, 99, 99, 0.35);
+	@media #{$xs,$sm}{
+		padding: 120px 30px 60px;
+	}
+}
+.cta__search-input {
+	position: relative;
+	input {
+		width: 100%;
+		height: 80px;
+		color: #989898;
+		font-size: 17px;
+		padding-left: 30px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--clr-common-white);
+		box-shadow: 0px 25px 40px rgba(50, 73, 179, 0.08);
+		padding-right: 240px;
+		@media #{$xs,$sm}{
+			padding-right: 30px;
+		}
+	}
+	button {
+		height: 60px;
+		background-color: var(--clr-theme-1);
+		padding: 0 45px;
+		font-weight: 600;
+		font-size: 16px;
+		color: var(--clr-common-white);
+		position: absolute;
+		right: 10px;
+		border-radius: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+		@media #{$xs,$sm}{
+			position: static;
+			margin-top: 50px;
+		}
+	}
+}
+.cta__main-wrappper {
+	background: var(--clr-bg-sky);
+	padding: 120px 50px;
+	border-radius: 20px;
+	@media #{$xxs}{
+		padding: 100px 20px;
+	}
+}
+.cta__title {
+	font-size: 50px;
+	font-weight: 600;
+	line-height: 1.6;
+	color: var(--clr-common-headind);
+	@media #{$xxs}{
+		font-size: 36px;
+	}
+	@media #{$xs,$sm,$md,$lg}{
+		font-size: 40px;
+	}
+	@media #{$xl}{
+		font-size: 45px;
+	}
+}
+.cta__icon {
+	width: 144px;
+	height: 144px;
+	display: inline-block;
+	background: var(--clr-common-white);
+	text-align: center;
+	line-height: 140px;
+	border-radius: 50%;
+	margin-bottom: 50px;
+}
+.cta__filter {
+	max-width: 685px;
+	margin: 0 auto;
+}
