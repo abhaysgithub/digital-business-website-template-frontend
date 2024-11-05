@@ -1,7 +1,7 @@
-# Digital Business Template Website - Frontend
+# Digital Business Website Template  - Frontend
 
 A professional frontend template for digital businesses, providing essential sections for marketing, consulting, or tech service websites.
-- check it out : **https://abhaysgithub.github.io/digital-business-template-website-frontend/**
+- check it out : **https://abhaysgithub.github.io/digital-business-website-template-frontend/**
 
 ## Introduction
 
@@ -18,4 +18,4 @@ The **Digital Business Website** is ideal for companies looking to establish a m
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/abhaysgithub/digital-business-template-website-frontend.git
+   git clone https://github.com/abhaysgithub/digital-business-website-template-frontend.git
